@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enchanted Forest Puzzle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>The Owl</h1>
+        <p>You chose the owl.  It grabs you by its talons and you are dropped on the back of the upper field.<br>
+            You stand at the entrance of the enchanted forest (which is near the large red building). 
+            <br>Arrange the symbols to reveal the correct path to the old tree. (make sure spaces are in between your solution)</p>
+        
+        <form id="symbolForm">
+            <label for="symbolOrder">Symbol Order:</label>
+            <input type="text" id="symbolOrder" placeholder="Enter symbols in order, e.g., ○ △ ■">
+
+            <button type="button" onclick="checkSymbolOrder()">Submit</button>
+        </form>
+
+        <p id="resultMessage"></p>
+
+        <div class="symbol-path">
+            <!-- Place the symbols on the ground in the desired order -->
+            <div class="symbol" data-direction="north">■</div>
+            <div class="symbol" data-direction="east">△</div>
+            <div class="symbol" data-direction="west">○</div>
+            <!-- Add more symbols as needed -->
+            <button id="nextButton" style="display: none;">Next</button>
+        </div>
+    </div>
+
+    <script src="forest_puzzle.js"></script>
+</body>
+
+</html>

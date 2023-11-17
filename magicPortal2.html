@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mystical Crystal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Include the portal challenge elements -->
+        <h2>An Encounter with a Magical Portal</h2>
+        <p>Well, you are out of the basement... but now you stand before a magical portal, adorned with mystical symbols. To activate it, perform the following actions in the correct order:</p>
+
+        <!-- List of actions to be performed -->
+        <ol id="portalActions">
+            <li id="action4" draggable="true" ondragstart="drag(event)">Touch the ancient tome on the pedestal.</li>
+            <li id="action3" draggable="true" ondragstart="drag(event)">Ring the enchanted bell hanging from the ceiling.</li>
+            <li id="action2" draggable="true" ondragstart="drag(event)">Rotate the ornate key in the mysterious lock.</li>
+            <li id="action1" draggable="true" ondragstart="drag(event)">Light the candles in the correct order: left, right, center.</li>
+        </ol>
+        
+        <ol id="dropZone"></ol>
+
+        <button id="submitOrder">Test the Order</button>
+
+        <button id="continueButton" style="display: none;" onclick="window.location.href='blocks.html'">Enter the Portal</button>
+
+        <p id="portalResultMessage"></p>
+    </div>
+
+    <script src="magicPortal2.js"></script>
+</body>
+
+</html>

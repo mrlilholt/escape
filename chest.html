@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Treasure Chest</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Treasure Chest of Confusion</h1>
+        <p>You discover a locked treasure chest. A riddle is inscribed on the chest:</p>
+
+        <!-- Display the riddle -->
+        <div class="riddle">
+            <p><strong>Riddle:</strong></p>
+            <p>I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?</p>
+        </div>
+
+        <!-- Input field for user's answer -->
+        <label for="answer">Your Answer:</label>
+        <input type="text" id="answer" placeholder="Enter your answer">
+
+        <!-- Button to check the answer -->
+        <button onclick="checkAnswer()">Open the Chest</button>
+
+        <!-- Display result message -->
+        <p id="riddleResultMessage"></p>
+        <button id="hiddenButton" style="display: none;" onclick="window.location.href='speedlimit.html'">Look at what's inside.</button>
+    </div>
+
+    <script src="chest.js"></script>
+</body>
+
+</html>

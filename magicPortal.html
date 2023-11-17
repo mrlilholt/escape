@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Magic Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap">
+    <style>
+        /* Additional styles for hiding the button initially */
+        #clueButton {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <h1>An Encounter with a Magical Portal</h1>
+        <p>Well, you are out of the basement... but now you stand before a magical portal, adorned with what appear to be strange fruits hanging from the entrance. To activate the portal, there's a note that reads:</p>
+        <p><em>Someone has stolen our berries and took them through the portal.  We need to know how many unripe berries were taken.  Can you help?</em></p>
+    </div>
+    <div class="center-image">
+        <img src="assets/berries.jpeg" alt="Some weird berries" class="berries">
+    </div>
+    <div class="form-container">
+        <form onsubmit="checkAnswer(event)">
+            <div>
+                <label for="answer1">Attempt your guess for how many unripe berries are missing here:</label>
+                <input type="number" id="answer1" placeholder="Enter the answer" required>
+            </div>
+            <button type="submit" class="center-button">Test</button>        
+        </form>
+    </div>  
+<div class="container">
+<!-- Hidden button for the next clue -->
+<button id="clueButton" onclick="proceedToNextClue()" style="display: none;">Go through the portal</button>
+        <!-- Display result message -->
+        <p id="resultMessage"></p>
+    </div>
+
+    <script src="magicPortal.js"></script>
+</body>
+
+</html>

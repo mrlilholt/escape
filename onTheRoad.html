@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On The Roadside</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap">
+    <style>
+        /* Additional styles for hiding the button initially */
+        #clueButton {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>On The Roadside</h1>
+        <p>You find yourself on the side of the road, and a mysterious voice echoes:</p>
+        <p>"To return to Baldwin, take the first step and solve this riddle:</p>
+        <p><strong>The more you take, the more you leave behind. What am I?</strong></p>
+
+        <!-- Form for entering the answer -->
+        <form onsubmit="checkAnswer(event)">
+            <label for="answer">Your Answer:</label>
+            <input type="text" id="answer" placeholder="Enter your answer" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Hidden button for the next clue -->
+        <button id="clueButton" onclick="proceedToNextClue()">Proceed to Clue</button>
+
+        <!-- Display result message -->
+        <p id="resultMessage"></p>
+    </div>
+
+    <script src="onTheRoad.js"></script>
+</body>
+
+</html>

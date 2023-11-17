@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mystical Crystal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Include the puzzle elements -->
+        <h2>Lost Room in the Basement</h2>
+        <p>You follow the light...You find yourself in a mysterious room. The crystal's light has brought you to a secret room in the Residence Basement.</p>
+
+    <div class="container">
+        <p>This is a hidden library in the basement, filled with numbered books. Each book has a unique clue associated with it.</p>
+
+        <!-- Present the riddle -->
+        <div class="riddle">
+            <p><strong>Riddle:</strong></p>
+            <p>At night they come without being fetched.<br>
+            By day they are lost without being stolen.</p>
+        </div>
+
+        <!-- Numbered books with clues -->
+        <div class="center">
+        <div class="book" id="book1" onclick="selectBook(1)">Book 1</div>
+        <div class="book" id="book2" onclick="selectBook(2)">Book 2</div>
+        <div class="book" id="book3" onclick="selectBook(3)">Book 3</div>
+        <div class="book" id="book4" onclick="selectBook(4)">Book 4</div>
+        <!-- Add more books as needed -->
+        <form id="riddleForm">
+            <label for="riddleAnswer">Your Answer to the Riddle:<br></label>
+            <input type="text" id="riddleAnswer" name="riddleAnswer">
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+        <button id="continueButton" style="display: none;" onclick="window.location.href='magicPortal.html'">Continue</button>
+                <!-- Display result message -->
+        <p id="selectBookResultMessage"></p>
+    </div>
+
+    <script src="basement.js"></script>
+</body>
+
+</html>

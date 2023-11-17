@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mysterious Box</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap">
+    <style>
+        /* Additional styles for hiding the button initially */
+        #clueButton {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>The Mysterious Box</h1>
+        <img src="assets/box.gif" alt="a mysterious box">
+        <p>The Mysterious Box suddenly falls into your lap!  But there is one final test.  You need all four clues in the right order to open this mysterious box to see what is inside.</p>
+        <p>If you have all four <a href="clues/clueq.html">clues</a>, enter them in the correct order below. <em>(if you don't have all four yet, go back to the room and choose the object(s) you haven't yet explored to find more clues)</em></p>
+        <!-- Form for entering the answer -->
+        <!-- Form for entering the answers -->
+        <form onsubmit="checkAnswer(event)">
+            <div>
+                <label for="answer1">Enter the first clue:</label>
+                <input type="text" id="answer1" placeholder="Enter the answer" required>
+            </div>
+            <div>
+                <label for="answer2">Enter the second clue:</label>
+                <input type="text" id="answer2" placeholder="Enter the answer" required>
+            </div>
+            <div>
+                <label for="answer3">Enter the third clue:</label>
+                <input type="text" id="answer3" placeholder="Enter the answer" required>
+            </div>
+            <div>
+                <label for="answer4">Enter the fourth clue:</label>
+                <input type="text" id="answer4" placeholder="Enter the answer" required>
+            </div>
+            <button type="submit">Test your clues</button>
+        </form>
+
+    <button onclick="window.location.href='../room.html'">Go back to room</button>
+
+<!-- Hidden button for the next clue -->
+    <button id="clueButton" onclick="proceedToNextClue()" style="display: none;">OPEN THE MYSTERIOUS BOX</button>
+        <!-- Display result message -->
+        <p id="resultMessage"></p>
+    </div>
+
+    <script src="close.js"></script>
+</body>
+
+</html>

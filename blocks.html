@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Through the Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap">
+    <style>
+        /* Additional styles for hiding the button initially */
+        #clueButton {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>On the other side of the portal</h1>
+        <p>You went through the portal and were taken to a childlike state.  You see blocks.</p>
+        <p>There seems to be a hidden message in the blocks.  What number is missing?</p>
+        <img src="assets/blocks.jpeg" alt="blocks with numbers" class="blocks-image">
+        <!-- Form for entering the answers -->
+        <form onsubmit="checkAnswer(event)">
+            <div>
+                <label for="answer1">Enter the missing number:</label>
+                <input type="number" id="answer1" placeholder="Enter the answer" required>
+            </div>
+            <button type="submit">Test</button>
+        </form>
+
+<!-- Hidden button for the next clue -->
+<button id="clueButton" onclick="proceedToNextClue()" style="display: none;">Get a CLUE</button>
+        <!-- Display result message -->
+        <p id="resultMessage"></p>
+    </div>
+
+    <script src="blocks.js"></script>
+</body>
+
+</html>

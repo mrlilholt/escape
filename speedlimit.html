@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inside the Treasure Chest</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>The only contents you find:</h1>
+        <p>You find a piece of paper with mysterious coordinates written on it:</p>
+        <p><strong>Coordinates:</strong> 40.0791947, -75.3785882</p>
+        <p>Next to the coordinates, there's a prompt:</p>
+
+        <!-- Display the prompt -->
+        <div class="prompt">
+            <p><strong>What is the speed limit?</strong></p>
+        </div>
+
+        <!-- Form for entering the speed limit -->
+        <form onsubmit="checkSpeedLimit(event)">
+            <label for="speedLimit">Enter the speed limit:</label>
+            <input type="number" id="speedLimit" placeholder="Enter speed limit" required>
+            <button type="submit">Check</button>
+        </form>
+
+        <button id="hiddenButton" style="display: none;" onclick="window.location.href='onTheRoad.html'">Next Challenge</button>
+        <!-- Display result message -->
+        <p id="speedLimitResultMessage"></p>
+    </div>
+
+    <script src="speedlimit.js"></script>
+</body>
+
+</html>

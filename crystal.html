@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>The Mystical Crystal</h1>
+        <p>The surge of energy is becoming overwhelming!  BOOM!  The lights go out in the room. </p>
+        <p><strong>The crystal whispers:</strong> "To unlock the next stage of your journey, find the path illuminated by the crystal light."</p>
+        <p>The crystal's light reveals the way to the next puzzle.</p>
+        
+        <p><strong>Your Task:</strong> Choose the correct symbol illuminated by the crystal.</p>
+
+        <!-- You can add buttons or links for each path option -->
+        <div class="button-container">
+        <button onclick="choosePath('♻')">#</button>
+        <button onclick="choosePath('★')">★</button>
+        <button onclick="choosePath('♣')">♣</button>
+        <button onclick="choosePath('♻')">@</button>
+        <button onclick="choosePath('★')">●</button>
+        <button onclick="choosePath('♣')">✹</button>
+        <button onclick="choosePath('♻')">☽</button>
+        <button onclick="choosePath('★')">☀</button>
+        <button onclick="choosePath('♣')">☁</button>
+        <button onclick="choosePath('♻')">☯</button>
+        <button onclick="choosePath('★')">❂</button>
+        <button onclick="choosePath('♣')">♻</button>
+        <button onclick="choosePath('◆')">◆</button>
+        <button onclick="choosePath('★')">*</button>
+        </div>
+        <div class="center">
+            <button id="nextButton" style="display: none;">You've lit the path: continue</button>
+        </div>
+    </div>
+
+    <script src="crystal.js"></script>
+</body>
+
+</html>

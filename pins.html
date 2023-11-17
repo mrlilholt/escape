@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bowling Pins</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap">
+    <style>
+        /* Additional styles for hiding the button initially */
+        #clueButton {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Bowling Pins</h1>
+        <p>You open the safe to see what is inside.  There are bowling pins with numbers on them.</p>
+        <p>They are all set upright and a note reads: <em>Which three pins are needed to be knocked down to equal exactly 100?</em> (enter your answers from lowest number to highest)</p>
+        <img src="assets/pins.jpeg" alt="A bunch of silly bowling pins with strange numbers on them" class="blocks-image">
+        <!-- Form for entering the answer -->
+        <!-- Form for entering the answers -->
+        <form onsubmit="checkAnswer(event)">
+            <div>
+                <label for="answer1">Enter the first number:</label>
+                <input type="number" id="answer1" placeholder="Enter the answer" required>
+            </div>
+            <div>
+                <label for="answer2">Enter the second number:</label>
+                <input type="number" id="answer2" placeholder="Enter the answer" required>
+            </div>
+            <div>
+                <label for="answer3">Enter the third number:</label>
+                <input type="number" id="answer3" placeholder="Enter the answer" required>
+            </div>
+            <button type="submit">Test</button>
+        </form>
+
+<!-- Hidden button for the next clue -->
+<button id="clueButton" onclick="proceedToNextClue()" style="display: none;">Move on</button>
+        <!-- Display result message -->
+        <p id="resultMessage"></p>
+    </div>
+
+    <script src="pins.js"></script>
+</body>
+
+</html>

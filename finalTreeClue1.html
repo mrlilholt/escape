@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree of Symbols Clue Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Tree of Symbols Clue Challenge</h1>
+        <p>Congratulations on successfully navigating the paths guided by the Old Tree's Symbols! As a reward, you receive a clue to guide you further.</p>
+
+        <p><strong>Your Clue:</strong></p>
+        <div id="mathClue"></div>
+
+        <p>To unlock the next stage, solve the following math question related to the symbols:</p>
+        <p id="mathQuestion"></p>
+
+        <label for="userAnswer">Your Answer:</label>
+        <input type="text" id="userAnswer">
+
+        <button onclick="checkMathAnswer()">Submit Answer</button>
+
+        <p id="mathResultMessage"></p>
+
+        <button id="clueButton" style="display: none;"> Get a CLUE</button>
+        
+    </div>
+
+    <script src="finalTreeClue1.js"></script>
+</body>
+
+</html>

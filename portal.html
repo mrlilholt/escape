@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Through the Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>On the otherside</h1>
+        <p>A clue is, guarded by seven glowing stones. Arrange the stones in the correct order to unlock the next clue.</p>
+
+        <!-- Magical stones with colors -->
+
+       <!-- Magical stones with colors -->
+<ol id="initialZone" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <!-- List items go here -->
+    <ul>
+    <li class="stone" id="violet" draggable="true" ondragstart="drag(event)" style="background-image: url('assets/gems/violet.png');"></li>
+    <li class="stone" id="red" draggable="true" ondragstart="drag(event)" style="background-image: url('assets/gems/red.png');"></li>
+    <li class="stone" id="indigo" draggable="true" ondragstart="drag(event)" style="background-image: url('assets/gems/indigo.png');"></li>
+    <li class="stone" id="green" draggable="true" ondragstart="drag(event)" style="background-image: url('assets/gems/green.png');"></li>
+    <li class="stone" id="orange" draggable="true" ondragstart="drag(event)" style="background-image: url('assets/gems/orange.png');"></li>
+    <li class="stone" id="yellow" draggable="true" ondragstart="drag(event)" style="background-image: url('assets/gems/yellow.png');"></li>
+    <li class="stone" id="blue" draggable="true" ondragstart="drag(event)" style="background-image: url('assets/gems/blue.png');"></li>
+    </ul>
+
+    <ol id="dropZone2" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <!-- List items go here -->
+    </ol>
+
+<button onclick="checkOrder()">Check the Order</button>
+<button id="hiddenButton" style="display: none;" onclick="window.location.href='clues/cluer.html'">Your Clue Awaits!</button><!-- Display result message -->
+<p id="arrangeStonesResultMessage"></p>
+
+<script src="portal.js"></script>
+</body>
+
+</html>

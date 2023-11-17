@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Safe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap">
+    <style>
+        /* Additional styles for hiding the button initially */
+        #clueButton {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>The Safe</h1>
+        <p>You've found a mysterious key in the room. Attached to it is a note:</p>
+        <p>The key won't figure out the combination to this lock.  Can you?</p>
+        <img src="assets/safe.jpeg" alt="A safe with a combination lock" class="blocks-image">
+        <!-- Form for entering the answer -->
+        <!-- Form for entering the answers -->
+        <form onsubmit="checkAnswer(event)">
+            <div>
+                <label for="answer1">Enter the first number:</label>
+                <input type="number" id="answer1" placeholder="Enter the answer" required>
+            </div>
+            <div>
+                <label for="answer2">Enter the second number:</label>
+                <input type="number" id="answer2" placeholder="Enter the answer" required>
+            </div>
+            <button type="submit">Test</button>
+        </form>
+
+<!-- Hidden button for the next clue -->
+<button id="clueButton" onclick="proceedToNextClue()" style="display: none;">Open the Safe</button>
+        <!-- Display result message -->
+        <p id="resultMessage"></p>
+    </div>
+
+    <script src="key.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Tree Puzzle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>◆ Old ♥ Tree ♣ Puzzle◆  </h1>
+        <h1>★ ◆ ★ ◆ ♠ ◆ ★ ◆★ </h1>
+        <p>You stand before the ancient tree. Its branches shimmer with enchantment, revealing hidden symbols.</p>
+        <p>Remember the sequence and recreate it to unlock the tree's magic.  If you missed it, refresh the page.  (make sure there are no spaces in this submission)</p>
+        
+        <div id="symbolDisplay" class="symbol-path"></div>
+        <div id="symbolSelection" class="symbol-path"></div>
+
+        <form id="solutionForm">
+            <label for="solution">Enter your solution:</label>
+            <input type="text" id="solution" name="solution">
+            <button onclick="checkSymbolSequence()">Submit</button>
+        </form>
+        <button id="nextButton" style="display: none;">Next</button>
+        <p id="resultMessage"></p>
+    </div>
+
+    <script src="tree_puzzle.js"></script>
+</body>
+
+</html>
